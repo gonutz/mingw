@@ -14,3 +14,6 @@ submodule MinGW's `bin` folder to the `PATH` like this:
 Prepending it, rather than appending it, makes sure that our own MinGW tools are
 used when building, not other tools of the same name that are on the `PATH` as
 well.
+`setlocal` makes sure that the `PATH` variable does not escape into the outer
+scope, in case you call this script from another one which needs the original
+`PATH` afterwards.
